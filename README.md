@@ -68,8 +68,6 @@ Here are the most important path:
 * `<massif_url>/stop` : stop a certain query
 * `<massif_url>/configs` : get all registered configs
 
-For implementation details, see: [src/main/resources/web/index.html](https://github.com/IBCNServices/StreamingMASSIF/blob/master/src/main/resources/web/index.html)
-
 ### REST API call examples with the [cURL](https://linuxize.com/post/curl-post-request/) tool
 List of active configs:
 ```
