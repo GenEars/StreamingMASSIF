@@ -37,10 +37,22 @@ How to cite [MASSIF](https://link.springer.com/article/10.1007/s10115-016-0969-1
 ## Building and running MASSIF
 
 ### Build
-To build MASSIF, call `mvn` and get the compiled `.jar`.
+To build the MASSIF app, call `mvn` and get the compiled `.jar`.
 ```shell
 mvn clean compile assembly:single
 mv target/massif-jar-with-dependencies.jar .
+```
+
+To build the MASSIF classes (e.g. for usage in higher level apps), call `mvn` to compile and install the project in the local repository, then add the package to the higher level app dependencies (see `pom.xml` snippet below):  
+```shell
+mvn install -Dmaven.test.skip=true 
+```
+```xml
+<dependency>
+    <groupId>be.ugent.idlab</groupId>
+    <artifactId>massif</artifactId>
+    <version>0.0.1</version>
+</dependency>
 ```
 
 ### Run
